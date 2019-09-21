@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+      	<meta http-equiv="Expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache">
+		<meta http-equiv="Cache" content="no-cache">
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+	</head>
+	<style>
+		[v-cloak]{
+			display: none;
+		}
+	</style>
+	<body>
+
+
+		<div v-cloak id="main">
+			<div id="firstPage" ref="firstPage" class="firstpage" style="position: relative;">
+				<img id="schoolLogo" ref="schoolLogo" src="http://img.wh241.cn/blog/20190812/YDKoazHQBLuG.png?imageslim">
+				<div class="leftimg" id="leftimg" ref="leftimg">
+					<img src="http://img.wh241.cn/blog/20190812/TBhLSwkjo72R.png?imageslim">
+					<p>青春&nbsp / &nbsp 自信&nbsp / &nbsp 技术宅</p>
+				</div>
+				<div class="rightimg" id="rightimg" ref="rightimg">
+					<img style="width: 100%;" src="http://img.wh241.cn/blog/20190812/pbaCED4s1dhq.png?imageslim">
+				</div>
+				<span id="learnMore" style="left: 8%;" ref="learnMore">
+					<div class="intro" style="color: white;" @click="learnMore">{{ intrBut }}</div>
+				</span>
+              	<span style="display: inline-block;position: absolute;bottom: 18%;left: 30%;background-color: #6d89c3;padding: 1.2% 3% 1.2% 3%;font-size: 95%;z-index: 100;" ref="gotoApply">
+					<a href="http://apply.newxstudio.com/" class="intro" style="color: white;text-decoration: none;">在线报名(限时开放)</a>
+				</span>
+			</div>
+			<div id="intr" class="intr" ref="intr">
+				<p style="font-size: 120%;font-weight: 900;padding: 5% 0;text-align: center;">NEWX<br>大学生网络文化工作室</p>
+				<p id="intrCon">合肥工业大学宣城校区NEWX大学生网络文化工作室是一个集合网页设计、媒体平台管理、视频制作、摄影摄像、图文编辑的学生工作室，旨在宣传优秀的校园文化，提高同学对多媒体技术的兴趣。欢迎各位对本工作室感兴趣的同学积极了解，踊跃报名。</p>
+			</div>
+          <!-- <a href="http://apply.newxstudio.com/" style="text-decoration: none;display: block;color: #6d89c3;text-align: center;font-size: 50px;margin-bottom: 50px;border: #6d89c3 2px solid;padding: 20px 0;">点我在线报名（限时开放）</a> -->
+		</div>
+
+
+		<div v-cloak class="News" id="news">
+			<p class="Newst" style="margin-bottom: 11.27px;">新闻动态</p>
+			<div id="bor"></div>
+			<div class="swiper-container-n" id="newsimg">
+				<div class="swiper-wrapper" style="width: 100%;">
+					<div v-for="list in newsList" class="swiper-slide" :key="list.id">
+						<img style="width: 100%;height: 35%" :src="list.img" alt="" @click="goToNewsDetails(list.id)">
+						<div class="swiCon" @click="goToNewsDetails(list.id)">
+							<div class="newsMain">摘要</div>
+							<div style="margin-bottom: 4%;" ref="newsTitle">{{list.title}}</div>
+							<div class="newsContent" ref="newsContent" style="font-size: 16px;">
+								{{list.desca}}
+								<div class="NCEllipsis"> ...... </div>
+							</div>
+							<div style="color: #747474;font-weight: 100;position: absolute;bottom: 2.5%;" @click="goToNewsDetails(list.id)">（点击查看详情）</div>
+						</div>
+					</div>
+				</div>
+				<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+
+
+
+		<div>
+			<div v-cloak id="details">
+				<div id="deHeader">
+					<p>我们的团队</p>
+					<div id="deLine"></div>
+				</div>
+				<div class="swiper-container-d" id="SwiperDiv">
+					<ul class="swiper-wrapper">
+						<a href="department.html?department=edit" class="swiper-slide">
+							<div class="deBor" style="background-color: #ffffff;">
+								<div class="dePad" style="background-color: #f29090;">
+									<div class="deImg"></div>
+								</div>
+							</div>
+						</a>
+						<a href="department.html?department=video" class="swiper-slide">
+							<div class="deBor" style="background-color: #ffffff;">
+								<div class="dePad" style="background-color: #53b7e0;">
+									<div class="deImg"></div>
+								</div>
+							</div>
+						</a>
+						<a href="department.html?department=web" class="swiper-slide">
+							<div class="deBor" style="background-color: #ffffff;">
+								<div class="dePad" style="background-color: rgb(255, 196, 0);">
+									<div class="deImg"></div>
+								</div>
+							</div>
+						</a>
+						<a href="department.html?department=office" class="swiper-slide">
+							<div class="deBor" style="background-color: #ffffff;">
+								<div class="dePad" style="background-color: #e8e87e;">
+									<div class="deImg"></div>
+								</div>
+							</div>
+						</a>
+						<a href="department.html?department=graphics" class="swiper-slide">
+							<div class="deBor" style="background-color: #ffffff;">
+								<div class="dePad" style="background-color: #778899;">
+									<div class="deImg"></div>
+								</div>
+							</div>
+						</a>
+						<a href="department.html?department=collect" class="swiper-slide">
+							<div class="deBor" style="background-color: #ffffff;">
+								<div class="dePad" style="background-color: #2afd9d;">
+									<div class="deImg"></div>
+								</div>
+							</div>
+						</a>
+					</ul>
+				</div>
+				<ul id="deWordUl">
+					<li @click="goToDepartment('web')" class="deWordLi">
+						<p class="deName">网站部</p>
+						<p class="deCon">“建站三番议，随手千万行”</p>
+						<div class="deLine" style="background-color: rgb(255, 196, 0);"></div>
+					</li>
+					<li @click="goToDepartment('office')" class="deWordLi">
+						<p class="deName">办公室</p>
+						<p class="deCon">“手握五车钱，监管十分严”</p>
+						<div class="deLine" style="background-color: #e8e87e;"></div>
+					</li>
+					<li @click="goToDepartment('graphics')" class="deWordLi">
+						<p class="deName">图文部</p>
+						<p class="deCon">“十步叠图层，千里挖素材”</p>
+						<div class="deLine" style="background-color: #778899;"></div>
+					</li>
+					<li @click="goToDepartment('collect')" class="deWordLi">
+						<p class="deName">采风部</p>
+						<p class="deCon">“力量予自然，自然创新篇”</p>
+						<div class="deLine" style="background-color: #2afd9d;"></div>
+					</li>
+					<li @click="goToDepartment('edit')" class="deWordLi">
+						<p class="deName">采编部</p>
+						<p class="deCon">“正当弃繻年，梦笔有花开”</p>
+						<div class="deLine" style="background-color: #f29090;"></div>
+					</li>
+					<li @click="goToDepartment('video')" class="deWordLi">
+						<p class="deName">视频部</p>
+						<p class="deCon">“pr百尺肝头，ae更进一步”</p>
+						<div class="deLine" style="background-color: #53b7e0;"></div>
+					</li>
+				</ul>
+				<div id="deMoreBtn" @click="deMoreA">了解更多</div>
+			</div>
+
+			<div v-cloak id="joinUs">
+				<div id="juHeader">
+					<p>加入我们</p>
+					<p></p>
+					<div id="juLine"></div>
+					<p>从这里出发，</p>
+					<p>步向你的远方。</p>
+					<div id="juLineB"></div>
+					<p>Start here,Go anywhere.</p>
+				</div>
+				<div id="juPicture">
+					<div id="jupL" style="background-image: url(http://img.wh241.cn/blog/20190812/KLrapR2Ej9WT.png?imageslim);"></div>
+					<div id="jupC" style="background-image: url(http://img.wh241.cn/blog/20190812/lFQNiYXt3BJE.png?imageslim);">
+						<div id="filmBox">
+							<iframe id="bilibili" ref="bilibili" src="//player.bilibili.com/player.html?aid=32597500&cid=57039590&page=1"
+							 scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
+						</div>
+					</div>
+					<div id="jupR" style="background-image: url(http://img.wh241.cn/blog/20190812/Ea09APyWc0TJ.png?imageslim);"></div>
+				</div>
+				<div id="juBut">
+                  
+                   	<a href="http://apply.newxstudio.com"  class="juButs" >
+						填写报名表
+					</a>  
+                     <a href="#contact" class="juButs">
+						联系我们
+					</a>
+				</div>
+			</div>
+			<div v-cloak id="contact">
+				<div id="coHeader">
+					<p>关注我们</p>
+					<div id="coLine"></div>
+				</div>
+				<div id="QRPic">
+					<router-link to="/qq" tag="div">
+						<img v-if="flag" style="width: 100%;" src="http://img.wh241.cn/blog/20190812/YGXWk8YvaRyL.png?imageslim" />
+						<img v-else style="width: 100%;" src="http://img.wh241.cn/blog/20190812/a9zxS8Hq6A6b.png?imageslim" />
+					</router-link>
+					<router-link to="/wechat" tag="div">
+						<img v-if="!flag" style="width: 100%;" src="http://img.wh241.cn/blog/20190812/W1c7Kaj4t8CV.png?imageslim" />
+						<img v-else style="width: 100%;" src="http://img.wh241.cn/blog/20190812/QfaRc2cSC8qH.png?imageslim" />
+					</router-link>
+				</div>
+				<div id="QRDiv">
+					<div id="QRLinkBG"></div>
+					<router-link to="/qq" tag="div" class="QRLink">QQ</router-link>
+					<router-link to="/wechat" tag="div" class="QRLink">微信</router-link>
+				</div>
+				<div id="QRTransform">
+					<transition name="QRcode">
+						<router-view></router-view>
+					</transition>
+				</div>
+				<div @click="coButMore" id="coButMore">
+					体验动画
+				</div>
+				<div id="cilcleDiv">
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</div>
+			<div v-cloak id="bottom">
+				<img id="botSchoolLogo" src="http://img.wh241.cn/blog/20190812/NSkuXWR0rgb2.png?imageslim" />
+				<img id="botNEWX" src="http://img.wh241.cn/blog/20190812/E4qTS8qr7xIF.png?imageslim" />
+				<div id="botLine"></div>
+				<div id="botTitle">
+					<span>友情链接</span>
+					<div id="BTEnglish">
+						<div style="left: 0;"></div>
+						<span>blogroll</span>
+						<div style="right: 0;"></div>
+					</div>
+				</div>
+				<div id="botA">
+					<a class="botA" href="http://www.hfut.edu.cn/">本部官网</a>
+					<a class="botA" href="http://xc.hfut.edu.cn/">宣区官网</a>
+					<a class="botA" href="http://lib.hfut.edu.cn/">图书馆</a>
+					<a class="botABot botA" href="http://jxglstu.hfut.edu.cn/eams5-student/login">信息门户</a>
+					<a class="botABot botA" href="http://xgzx.hfut.edu.cn/">学生工作</a>
+					<a class="botABot botA" href="http://online.hfut.edu.cn/">明理苑</a>
+				</div>
+				<div id="copyRight">
+					Copyright@2019-2020 NEWXSTUDIO
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" charset="utf-8" src="js/vue-2_6_10.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/index1.js"></script>
+</html>

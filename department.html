@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/department.css" />
+	</head>
+	<style>
+		[v-cloak]{
+			display: none;
+		}
+	</style>
+	<body>
+		<div v-cloak id="departmentBox" style="padding-bottom: 5%;">
+			<div id="department">
+				<div id="dePicBox" ref="dePicBox">
+					<div id="dePicBor">
+						<div id="dePic" ref="dePic"></div>
+					</div>
+				</div>
+				<div id="simple" ref="simple">
+					<div>{{ simple[deI][0] }}</div>
+					<div>{{ simple[deI][1] }}</div>
+				</div>
+				<div id="deContent" ref="deContent">
+					<div>
+						<div id="deName" ref="deName">{{ name[deI] }}</div>
+						{{ content[deI] }}
+					</div>
+                  <img style="width: 100%;margin-top: 4%;" :src="imgs[deI]">
+				</div>
+				<div id="botMore" ref="botMore">
+					<a href="https://m.bilibili.com/space/150053027?share_medium=android&share_source=qq&bbid=54496DB8-2FCA-4F13-8D75-5500E0097CC665589infoc&ts=1567254092958"
+					 v-if="deI==0" class="BMCon">bilibili</a>
+					<!-- <a href="#" v-else-if="deI==1" class="BMCon">教室查询</a> -->
+					<!-- <a href="#" v-else-if="deI==2" class="BMCon">办公室</a> -->
+					<!-- <a href="#" v-else-if="deI==3" class="BMCon">图文连接</a> -->
+					<!-- <a href="#" v-else-if="deI==4" class="BMCon">NEWX图站</a> -->
+					<!-- <a href="#" v-else-if="deI==5" class="BMCon">采编链接</a> -->
+					<a href="index1.html#details" class="BMCon">返回主站</a>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" charset="utf-8" src="js/vue-2_6_10.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/department.js"></script>
+</html>

@@ -1,0 +1,115 @@
+body {
+	background-image: url(http://img.wh241.cn/blog/20190812/oW3FSJaDQ7xY.png?imageslim);
+	background-repeat: repeat-y;
+	background-size: 100% auto;
+	overflow-x: hidden;
+}
+ul {
+	list-style-type: none;
+}
+* {
+	margin: 0;
+	padding: 0;
+  	font-family: '微软雅黑';
+}
+#newDetailsBox{
+	width: 80%;
+	height: auto;
+	padding: 10%;
+	overflow-x: hidden;
+}
+#webTitle{
+	width: 100%;
+	height: auto;
+	/* background-color: #28A745; */
+	font-weight: 300;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+#webTitle>div{
+	width: 10%;
+	height: 2px;
+	background-color: black;
+}
+#newsTitle{
+	width: 100%;
+	font-size: 80%;
+	font-weight: 900;
+	text-align: center;
+	margin: 8% 0;
+}
+#line{
+	width: 160%;
+	height: 2px;
+	background-color: #c3c3c3;
+	margin: 2% 0 12% -20%;
+}
+#img{
+	width: 100%;
+	height: auto;
+}
+#img>img{
+	width: 100%;
+	height: auto;
+}
+#deca{
+	font-size: 50%;
+	color: #8b8b8b;
+}
+#contact{
+	width: 100%;
+	height: auto;
+	text-indent: 10%;
+	letter-spacing: 5px;
+	line-height: 150%;
+	font-size: 52%;
+	margin: 9% 0 10% 0;
+}
+#botLine{
+	width: 60%;
+	height: 6px;
+	border-radius: 80%;
+	margin: 0 auto 6% auto;
+	background-color: #696969;
+}
+#time{
+	width: 100%;
+	text-align: center;
+	font-size: 45%;
+}
+#backA{
+	width: 80%;
+	margin: 5% auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 60%;
+	font-weight: 900;
+	color: black;
+}
+#backA>img{
+	width: 15%;
+	height: auto;
+	margin-bottom: 2.8%;
+}
+a#backA:link{
+	color: black;
+	text-decoration: none;
+}
+
+a#backA:visited {
+	color: black;
+	text-decoration: none;
+}
+
+a#backA:hover {
+	color: black;
+	text-decoration: none;
+}
+
+a#backA:active {
+	color: black;
+	text-decoration: none;
+}

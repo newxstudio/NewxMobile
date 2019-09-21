@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/newsDetails.css" />
+	</head>
+	<style>
+		[v-cloak]{
+			display: none;
+		}
+	</style>
+	<body>
+		<div v-cloak id="newDetailsBox">
+			<div id="webTitle">
+				<div></div>
+				NEWS
+				<div></div>
+			</div>
+			<div id="newsTitle">{{ news.title }}</div>
+			<div id="line"></div>
+			<div id="img">
+				<img :src="news.img" />
+			</div>
+			<!-- <div id="deca">新闻简介：{{ news.deca }}</div> -->
+			<div id="contact" ><div v-html="news.text"></div></div>
+			<div id="botLine"></div>
+			<div id="time">发布时间：{{ news.create_time }}</div>
+			<a id="backA" href="index1.html">
+				<img src="http://img.wh241.cn/blog/20190815/rHWPEEGezEoa.png?imageslim" />
+				<div>返回</div>
+			</a>
+		</div>
+	</body>
+	<script src="js/vue-2_6_10.js"></script>
+	
+	<script type="text/javascript" charset="utf-8" src="js/newsDetails.js"></script>
+</html>
